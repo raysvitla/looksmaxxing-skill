@@ -34,10 +34,11 @@ Activate this skill when the user asks about:
 |-------|------|
 | Hairstyle selection | `knowledge/hairstyles-guide.md` |
 | Men's facial attractiveness | `knowledge/mens-specific.md` |
-| Face shapes and proportions | `knowledge/face-shapes.md` |
-| Grooming essentials | `knowledge/grooming-essentials.md` |
+| **Glasses selection** | `knowledge/glasses-selection-guide.md` |
+| **Skincare, dark circles, facial bloating** | `knowledge/skincare-guide.md` |
+| Face shapes | `knowledge/face-shapes.md` |
 | Facial proportions (golden ratio, thirds) | `knowledge/facial-proportions.md` |
-| Style principles | `knowledge/style-principles.md` |
+| **Style, clothing, color theory** | `knowledge/style-principles.md` |
 | Attractiveness science | `knowledge/attractiveness-science.md` |
 | Common mistakes | `knowledge/common-mistakes.md` |
 
@@ -140,15 +141,32 @@ Activate this skill when the user asks about:
 
 ---
 
-#### `grooming-essentials.md`
+#### `glasses-selection-guide.md`
 **What it covers:**
-- Skincare fundamentals (cleansing, moisturizing, sun protection)
-- Facial hair grooming (beards, stubble, clean-shaven)
-- Eyebrow grooming (shaping, thickness)
-- Hair care (quality, growth, loss prevention)
-- Common grooming mistakes
+- Do glasses make you less attractive? (research findings)
+- The 3 rules of glasses selection (shape, size, features)
+- Frame styles explained (rectangular, round, cat-eye, aviator, etc.)
+- Material guide (plastic, metal, wood)
+- Face shape-specific recommendations
+- Color selection by skin tone
+- How to try glasses (virtual & in-person)
+- Glasses for specific contexts (work, casual, dating)
 
-**Use when:** User asks about skincare, grooming routines, facial hair, or general maintenance.
+**Use when:** User asks about glasses, frames, what glasses suit their face, or eyewear selection.
+
+---
+
+#### `skincare-guide.md`
+**What it covers:**
+- **The 4 types of dark circles** (vascular, pigmented, structural, puffy bags) + specific treatments for each
+- **Skincare by skin type** (oily, dry, combination, sensitive) with routines and products
+- **Acne treatment** (mild, moderate, severe) with ingredient guides
+- **Anti-aging** (prevention and treatment)
+- **Facial bloating fixes** (immediate and long-term)
+- **Product selection guide** (how to choose cleanser, moisturizer, sunscreen)
+- **Routine templates** (AM/PM)
+
+**Use when:** User asks about skincare, dark circles, facial bloating, acne, anti-aging, or product recommendations.
 
 ---
 
