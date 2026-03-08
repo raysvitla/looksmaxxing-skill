@@ -2,7 +2,7 @@
 
 **An AI skill / knowledge base for evidence-based facial aesthetics, hairstyle selection, grooming, and style advice.**
 
-Built from **153 QOVES Studio YouTube video transcripts** covering facial analysis, attractiveness research, and optimization strategies.
+Built from **291 QOVES Studio YouTube video transcripts** (153 regular videos + 138 Shorts) covering facial analysis, attractiveness research, and optimization strategies.
 
 ---
 
@@ -158,13 +158,20 @@ Open an issue or submit a pull request.
 
 ## Changelog
 
+### v1.1 (March 2026)
+- Added 138 YouTube Shorts transcripts
+- Total: 291 videos processed (153 regular + 138 shorts)
+- Shorts provide concise, research-backed tips
+
 ### v1.0 (March 2026)
 - Initial release
-- 153 QOVES Studio videos processed
-- 8 core knowledge files
-- Complete hairstyle guide
+- 153 QOVES Studio regular videos processed
+- 9 comprehensive knowledge files
+- Complete hairstyle guide (6 features framework)
 - Men's facial aesthetics guide
-- Attractiveness science compendium
+- Comprehensive skincare guide (4 types of dark circles)
+- Glasses selection guide
+- Expanded facial proportions and style guides
 
 ---
 

@@ -63,13 +63,19 @@ This knowledge base was built from **153 QOVES Studio YouTube videos** (transcri
 
 ## Total Videos Processed
 
-**153 videos** covering facial aesthetics, attractiveness research, grooming, hairstyles, and style optimization.
+**291 videos total:**
+- **153 regular videos** (full-length content)
+- **138 YouTube Shorts** (concise tips and research highlights)
+
+All covering facial aesthetics, attractiveness research, grooming, hairstyles, and style optimization.
 
 ## Source
 
 All videos from: **[QOVES Studio YouTube Channel](https://www.youtube.com/@QOVESStudio)**
 
 Transcripts extracted: **March 2026**
+
+**Note:** All shorts had auto-generated English subtitles available.
 
 ---
 
