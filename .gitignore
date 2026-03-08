@@ -1,0 +1,5 @@
+raw-transcripts/
+clean-transcripts/
+*.vtt
+*.txt
+.DS_Store
