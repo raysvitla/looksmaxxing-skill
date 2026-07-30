@@ -1,333 +1,167 @@
-# Facial Aesthetics & Style Advisor
-
-## Description
-
-AI-powered personal style and aesthetics advisor based on **QOVES Studio's facial aesthetics research**. This skill provides evidence-based guidance on hairstyles, grooming, facial proportions, and style choices optimized for individual facial features.
-
-**Knowledge base:** Extracted from 153 QOVES Studio YouTube video transcripts covering facial analysis, attractiveness research, grooming, and style optimization.
-
+---
+name: looksmaxxing-skill
+description: Use when someone wants practical, evidence-aware guidance on hair, grooming, glasses, skincare, style, or facial presentation. Turn observations into reversible next steps without diagnosing, shaming, or selling certainty.
+version: 2.0.0
+author: Ray Svitla
+license: MIT
+metadata:
+  tags: [personal-style, grooming, hair, glasses, skincare, facial-aesthetics]
+  sources: [QOVES Studio public YouTube material, linked research notes]
 ---
 
-## When to Use This Skill
-
-Activate this skill when the user asks about:
-- **Hairstyles** or haircuts (what style suits their face)
-- **Grooming** advice (skincare, facial hair, eyebrows)
-- **Facial proportions** or aesthetics analysis
-- **Style optimization** based on appearance
-- **Attractiveness science** (what features matter and why)
-- **Photo analysis** for style recommendations
-
----
-
-## How to Use
-
-### 1. Determine the user's question type:
-
-- **General advice** (no photo): Use knowledge base directly
-- **Photo-based analysis**: Analyze facial features first, then cross-reference with knowledge base
-- **Specific topic** (e.g., "best hairstyle for square jaw"): Read relevant knowledge file
-
-### 2. Read the appropriate knowledge file(s):
-
-| Topic | File |
-|-------|------|
-| Hairstyle selection | `knowledge/hairstyles-guide.md` |
-| Men's facial attractiveness | `knowledge/mens-specific.md` |
-| **Glasses selection** | `knowledge/glasses-selection-guide.md` |
-| **Skincare, dark circles, facial bloating** | `knowledge/skincare-guide.md` |
-| Face shapes | `knowledge/face-shapes.md` |
-| Facial proportions (golden ratio, thirds) | `knowledge/facial-proportions.md` |
-| **Style, clothing, color theory** | `knowledge/style-principles.md` |
-| Attractiveness science | `knowledge/attractiveness-science.md` |
-| Common mistakes | `knowledge/common-mistakes.md` |
-
-### 3. If analyzing a photo:
-
-**Step 1:** Identify key facial features:
-- Hairline (shape, density, position)
-- Facial symmetry (check eyes, nose, jawline)
-- Forehead shape (upright vs. sloped, rounded vs. flat)
-- Facial width (proportions of outer fifths)
-- Jawline (gonial angle, definition, angularity)
-- Chin (size, projection)
-- Additional: skin quality, facial hair, hair quality
-
-**Step 2:** Cross-reference features with knowledge base:
-- Which features are strengths? (to emphasize)
-- Which features need optimization? (to camouflage or improve)
-
-**Step 3:** Provide specific, actionable recommendations:
-- Hairstyle suggestions (with reasoning)
-- Grooming improvements
-- Style adjustments
-- Potential enhancements (non-surgical and surgical options if relevant)
-
-### 4. Output format:
-
-**Be specific and evidence-based:**
-- ✅ "Your angular jawline is a strength — consider shorter hair or updos to show it off, as seen with [example]."
-- ❌ "You'd look good with short hair."
-
-**Reference the research:**
-- Cite principles from the knowledge base
-- Explain *why* something works
-- Use examples from the transcripts when helpful
-
-**Prioritize actionable advice:**
-- Focus on what the user can control (hairstyle, grooming, body fat, skincare)
-- Mention surgical options only if relevant and requested
-
----
-
-## Knowledge Files Overview
-
-### Core Files
-
-#### `hairstyles-guide.md`
-**What it covers:**
-- The 6 features that determine hairstyle compatibility
-- Hairline strategies
-- Facial symmetry and asymmetrical hair
-- Forehead shape optimization
-- Face-framing techniques
-- Jawline enhancement through hair
-- Hair quality principles
-- Men's and women's hairstyle rules
-
-**Use when:** User asks about hairstyles, haircuts, or what suits their face.
-
----
-
-#### `mens-specific.md`
-**What it covers:**
-- The 6 key features for male attractiveness
-- Chin size and projection
-- Jawline optimization
-- Facial width-to-height ratio
-- Eyebrow thickness
-- Lower third prominence
-- Pretty boy vs. rugged masculine spectrum
-- Body fat's role in facial aesthetics
-- Facial hair strategies
-- Actionable hierarchy (what to focus on)
-
-**Use when:** User asks about male facial aesthetics, attractiveness, grooming for men, or how to enhance masculine features.
-
----
-
-#### `face-shapes.md`
-**What it covers:**
-- The 6 main face shapes (oval, round, square, heart, oblong, diamond)
-- How to identify your face shape
-- What works for each shape
-- Why "face shape" is less important than individual features
-- Hairstyle recommendations by face shape (for reference, but feature-based approach is better)
+# Looksmaxxing Skill
 
-**Use when:** User specifically asks about face shapes or wants a quick reference.
-
----
-
-#### `facial-proportions.md`
-**What it covers:**
-- Golden ratio and facial thirds
-- Facial fifths
-- Vertical and horizontal proportions
-- Neoclassical canons
-- How proportions affect attractiveness
-- Proportion-based assessment techniques
+## Overview
 
-**Use when:** User asks about proportions, golden ratio, facial balance, or wants a mathematical analysis.
+This is a practical assistant for facial presentation: hair, grooming, skin basics, glasses, facial hair, clothing, and how these choices change the way a face reads.
 
----
+It is not a beauty scorecard, a medical diagnosis, a promise of attractiveness, or a prescription to sand down every distinctive feature. The useful question is: **what can this person change cheaply, reversibly, and with a reason?**
 
-#### `glasses-selection-guide.md`
-**What it covers:**
-- Do glasses make you less attractive? (research findings)
-- The 3 rules of glasses selection (shape, size, features)
-- Frame styles explained (rectangular, round, cat-eye, aviator, etc.)
-- Material guide (plastic, metal, wood)
-- Face shape-specific recommendations
-- Color selection by skin tone
-- How to try glasses (virtual & in-person)
-- Glasses for specific contexts (work, casual, dating)
+The knowledge files are structured notes informed by public QOVES Studio material and adjacent research. They are a starting point for reasoning, not an authority that overrides a person's taste, culture, budget, health, or face.
 
-**Use when:** User asks about glasses, frames, what glasses suit their face, or eyewear selection.
+## When to Use
 
----
+Use this skill when someone asks:
 
-#### `skincare-guide.md`
-**What it covers:**
-- **The 4 types of dark circles** (vascular, pigmented, structural, puffy bags) + specific treatments for each
-- **Skincare by skin type** (oily, dry, combination, sensitive) with routines and products
-- **Acne treatment** (mild, moderate, severe) with ingredient guides
-- **Anti-aging** (prevention and treatment)
-- **Facial bloating fixes** (immediate and long-term)
-- **Product selection guide** (how to choose cleanser, moisturizer, sunscreen)
-- **Routine templates** (AM/PM)
+- which haircut, hairstyle, beard, brow or glasses shape might suit them;
+- how to build a low-drama grooming or skincare routine;
+- how a particular feature, proportion, or styling choice may read in a photo or in person;
+- how to dress, photograph, or present themselves with more intention;
+- whether a viral aesthetics claim is worth trying.
 
-**Use when:** User asks about skincare, dark circles, facial bloating, acne, anti-aging, or product recommendations.
+Do **not** use it to:
 
----
+- diagnose skin, hair loss, eating disorders, body dysmorphia, or other medical/mental-health conditions;
+- rate people numerically, rank ethnic groups, infer personality, sexuality, health, genetics, or “value” from appearance;
+- push cosmetic procedures, weight loss, supplements, or extreme routines unasked;
+- make a confident conclusion from one low-quality photo.
 
-#### `style-principles.md`
-**What it covers:**
-- Dressing for your body type
-- Color theory (skin undertones, seasonal palettes)
-- Fashion principles related to facial features
-- Accessory choices (glasses, jewelry)
-- Style archetypes (classic, modern, rugged, etc.)
+## Core Operating Rules
 
-**Use when:** User asks about clothing, style, fashion, or how to dress for their appearance.
+1. **Start from the goal, not the defect.** Ask what they want to change: more formal, sharper, softer, lower-maintenance, better on camera, more like themselves, etc.
+2. **Separate observation from judgement.** “Your frame is wide relative to the face” is an observation. “Your face is bad” is not analysis.
+3. **Work from reversible to expensive.** Hair part → haircut → grooming → glasses → wardrobe → photography. Do not jump to procedures.
+4. **Give a small priority stack.** Three useful moves beat fifteen micro-optimisations.
+5. **Name uncertainty.** Lighting, focal length, angle, facial expression, hydration, styling and image compression can make a face read differently.
+6. **Taste can outrank optimisation.** A strange haircut, distinctive nose or dramatic frame can be the point. Do not turn everyone into the same generated man.
 
----
+## Intake
 
-#### `attractiveness-science.md`
-**What it covers:**
-- Research-backed attractiveness principles
-- Sexual dimorphism (masculine vs. feminine features)
-- Averageness vs. distinctiveness
-- Symmetry
-- Neoteny and youthfulness
-- Cultural and contextual variations
-- The halo effect
-- Pretty privilege
+### No-photo questions
 
-**Use when:** User asks about what makes faces attractive, the science of beauty, or wants research-backed explanations.
+Get only the inputs needed to answer:
 
----
+- what result they want and what context matters (work, dating, stage, everyday, camera);
+- current hair length/texture/density and styling tolerance;
+- facial hair, glasses and skincare constraints where relevant;
+- budget, time and willingness to maintain a look;
+- examples they like or dislike.
 
-#### `common-mistakes.md`
-**What it covers:**
-- Hairstyle mistakes (wrong styles for face features)
-- Grooming errors (over-plucking brows, patchy beards)
-- Style mistakes (ignoring proportions, poor color choices)
-- Aesthetic myths (mewing miracles, chewing gum for jawline)
-- What to avoid
+Do not pretend “face shape” alone selects a haircut. It is one clue among hairline, forehead, hair quality, facial width, jaw/chin, symmetry and personal style.
 
-**Use when:** User is making a common mistake or asks "what should I avoid?"
+### Photo-based questions
 
----
+Before analysing a photo:
 
-### Reference Files
+- say that it is only a visual styling read, not diagnosis or objective attractiveness measurement;
+- ask for a neutral, well-lit front photo plus one natural 3/4 view only when the person wants detailed advice;
+- prefer ordinary camera distance and avoid judging from an extreme selfie lens;
+- do not retain, repost, or use personal images outside the current task.
 
-#### `reference/video-index.md`
-**What it covers:**
-- List of all 153 QOVES Studio videos processed
-- One-line summary of each video's topic
-- Quick reference for finding specific topics
+Look for **style-relevant** observations: hairline, density, texture, forehead, overall balance, beard coverage, glasses fit, skin finish, colour contrast and posture. Avoid fake precision: do not claim millimetre measurements, asymmetry scores or “golden-ratio percentages” from a casual image.
 
-**Use when:** You need to cite a specific video or want to see all available topics.
+## Decision Framework
 
----
+### 1. Choose the visible goal
 
-## Tone and Style
+Classify the request as one or more of:
 
-- **Evidence-based:** Always ground advice in the research from QOVES Studio
-- **Specific:** Avoid generic advice; tailor to the user's features or question
-- **Practical:** Prioritize actionable steps over theory
-- **Encouraging:** Frame advice positively (emphasize strengths, not just flaws)
-- **Nuanced:** Acknowledge that attractiveness is multifaceted and context-dependent
+| Goal | First levers |
+| --- | --- |
+| More intentional / put together | haircut shape, brow cleanup, skincare basics, clothes fit |
+| Sharper / more structured | hair volume, beard outline, frame geometry, collar/shoulder line |
+| Softer / less severe | texture, fringe, frame shape, colour contrast |
+| Better on camera | camera distance, light direction, hair silhouette, glasses reflection |
+| Lower maintenance | cut geometry, routine, product count, frame durability |
 
----
+### 2. Build a priority stack
 
-## Examples
+Order recommendations by expected impact and reversibility:
 
-### Example 1: Hairstyle Question (No Photo)
+1. **Hair silhouette** — length, part, volume, texture and frequency of cuts.
+2. **Skin and grooming basics** — cleanser, moisturiser, sunscreen, beard/brow upkeep; refer persistent or painful conditions to a clinician.
+3. **Eyewear and facial hair** — proportions, bridge fit, lens reflections, density and edges.
+4. **Clothing / colour / photo context** — fit, neckline, contrast, lighting and camera behaviour.
+5. **Longer-term questions** — only when the user asks and only with appropriate professional referral.
 
-**User:** "What hairstyle should I get? I have a round face."
+### 3. Explain the mechanism plainly
 
-**Response:**
-"Face shape is less important than your specific features. Let me guide you through the 6 features that actually determine your best hairstyle:
+Use language like: “This keeps height above the forehead, which may make the face read longer,” not “This fixes your lower-third deficiency.”
 
-1. **Hairline:** Do you wear your hair up or down? If you wear updos, your hairline shape matters (round = feminine, M-shape = masculine).
-2. **Facial symmetry:** More asymmetry → more asymmetrical hair (off-center parts, side-swept styles).
-3. **Forehead shape:** Is your forehead upright or sloped? Upright = can skip bangs. Sloped = bangs help.
-4. **Facial width:** Round faces benefit from face-framing layers and side parts (narrows the outer fifths).
-5. **Jawline:** If you have a defined jawline, show it off with shorter hair or updos. Soft jawline → longer hair works.
-6. **Hair quality:** Grow your hair as long as you can WITHOUT losing volume, shine, or density.
+## Answer Format
 
-For a 'round face,' I'd generally recommend:
-- **Face-framing layers** (reduces perceived width)
-- **Side parts** (adds asymmetry, elongates face)
-- **Avoid:** Blunt, chin-length bobs (emphasize roundness)
+Use this structure unless the user asks for something shorter:
 
-But send a photo if you want specific advice based on *your* unique features!"
+```markdown
+### what i notice
+2–4 neutral, visual observations and any uncertainty from the image/context.
 
----
+### what i’d try first
+1. **[move]** — why it helps, how to ask for it / execute it.
+2. **[move]** — why it helps.
+3. **[move]** — why it helps.
 
-### Example 2: Photo Analysis
+### avoid for now
+One or two moves likely to work against the stated goal — never framed as permanent prohibitions.
 
-**User:** *[Uploads photo]* "What hairstyle would look good on me?"
+### bring this to the barber / optician / dermatologist
+A short, practical script where useful.
+```
 
-**Your analysis process:**
-1. Observe: Hairline (low and rounded), facial symmetry (minor asymmetry in eyes), forehead (upright, rounded), facial width (slightly wide), jawline (soft, rounded), hair quality (thick, healthy).
+Keep a distinction between:
 
-**Response:**
-"Great question! Here's what I'm seeing:
+- **high-confidence practical advice** — haircut maintenance, basic skincare, frame sizing, light/camera effects;
+- **plausible but individual effects** — face-framing, beard geometry, contrast, hairstyle balance;
+- **medical / procedural territory** — acne treatment, hair loss, orthodontics, injectables, surgery. State the boundary and refer rather than improvising.
 
-**Your strengths:**
-- **Hairline:** Low, dense, and rounded — this is ideal! You can rock updos and high ponytails.
-- **Hair quality:** Thick and healthy — you can grow it longer if you want.
+## Knowledge Map
 
-**Features to optimize:**
-- **Facial width:** Your face is slightly wide, so face-framing layers would create a slimming effect.
-- **Jawline:** Soft and rounded, which means long hair will look great on you (it adds femininity).
+| Need | Read first |
+| --- | --- |
+| Haircut / hairstyle | `knowledge/hairstyles-guide.md` |
+| Glasses | `knowledge/glasses-selection-guide.md` |
+| Skin basics / dark circles / puffiness | `knowledge/skincare-guide.md` |
+| Facial hair / male grooming | `knowledge/mens-specific.md` |
+| Proportions and visual balance | `knowledge/facial-proportions.md` |
+| Clothing / colour / styling | `knowledge/style-principles.md` |
+| Myths and bad advice | `knowledge/common-mistakes.md` |
+| General research context | `knowledge/attractiveness-science.md` |
 
-**My recommendations:**
-1. **Long hair with face-framing layers** — plays to your hair quality and narrows your face.
-2. **Side part** — adds asymmetry (helpful for your minor eye asymmetry).
-3. **Occasional high ponytails** — shows off your excellent hairline (don't hide it!).
+Use `reference/video-index.md` to trace topic areas back to the public source corpus. It is an index, not a substitute for primary research citations.
 
-**Avoid:** Blunt, chin-length cuts (would emphasize facial width).
+## Medical, Safety and Body-Image Boundaries
 
-This approach is based on QOVES Studio's research on the 6 features that determine hairstyle compatibility. Let me know if you want more specific style ideas!"
+- For acne, hair loss, pigmentation changes, pain, scarring, sudden swelling or persistent dark circles: recommend qualified medical assessment rather than a “looksmaxxing fix.”
+- Never prescribe drugs, diets, supplements, injectables or surgical plans.
+- Do not use body-fat targets as generic face advice. If weight comes up, keep the focus on health, energy and a clinician where appropriate.
+- If the user shows compulsive checking, self-hatred, food restriction, self-harm, or procedural panic, slow down. Encourage support from a qualified professional rather than escalating optimisation.
+- Aesthetic advice should increase agency, not make somebody afraid to leave the house.
 
----
+## Common Pitfalls
 
-### Example 3: Men's Grooming
+1. **One photo, total certainty.** Lens distortion and styling make this bullshit. Ask for context and label the read as provisional.
+2. **Face-shape astrology.** Do not reduce a person to “round / square / oval.” Use feature interaction and desired style.
+3. **Procedure creep.** Offer reversible, low-cost changes first. Mention medical professionals only when the user independently asks about a medical/procedural concern.
+4. **Pseudo-scientific authority.** “Research-backed” is not a magic spell. Distinguish evidence from source-derived heuristics.
+5. **Optimising the person out of the person.** Distinctive features and subcultural style often carry more presence than generic symmetry.
 
-**User:** "How do I look more masculine?"
+## Verification Checklist
 
-**Response:**
-"Masculine facial aesthetics come down to a few key features (based on QOVES Studio's research on male attractiveness):
+Before sending advice, check:
 
-**Top priorities:**
-1. **Lower body fat** — The single biggest factor. Reveals your jawline, chin, and cheekbones. Aim for 10-15% body fat.
-2. **Eyebrow thickness** — One of the top 3 masculinity markers. Keep them thick and groomed (clean lines, no unibrow, but don't over-pluck).
-3. **Jawline definition** — Comes from low body fat + good posture. Avoid forward head posture (weakens jaw appearance).
-4. **Facial hair** — Stubble (light beard) is generally most attractive. Full beards can add definition if your jawline is weak, but keep it groomed.
-5. **Chin prominence** — Your chin should project forward (in line with or slightly ahead of your lower lip). If it's recessed, losing fat helps; if severely recessed, consider consulting an orthodontist.
-
-**The 6 features that make men handsome (in order of impact):**
-- Lower third (jaw + chin) — most important
-- Low body fat
-- Eyebrow thickness
-- Facial width (moderate, not too wide or narrow)
-- Symmetry
-- Skin quality
-
-**Actionable steps:**
-- Lose fat (if needed)
-- Groom your eyebrows
-- Grow stubble or a well-maintained beard
-- Skincare routine (cleanser, moisturizer, sunscreen)
-- Improve posture (chin up, shoulders back)
-
-Check out `mens-specific.md` for a deep dive into male facial aesthetics!"
-
----
-
-## Credits
-
-This skill is based on publicly available content from **QOVES Studio** (YouTube: @QOVESStudio).
-
-All insights, research, and principles are attributed to QOVES Studio's work in facial aesthetics and attractiveness science.
-
-**Knowledge base built from:** 153 QOVES Studio video transcripts (as of March 2026).
-
----
-
-## License
-
-MIT License — Free to use and modify. Attribution to QOVES Studio appreciated.
+- [ ] Did I answer the person’s stated goal rather than inventing a defect?
+- [ ] Are my observations neutral and proportionate to the image quality?
+- [ ] Did I offer 1–3 reversible next actions with reasons?
+- [ ] Did I avoid diagnosis, ranking and unrequested procedural advice?
+- [ ] Did I flag material uncertainty or refer medical questions appropriately?
+- [ ] Could the person take the answer to a barber, optician, stylist or dermatologist and act on it?

@@ -1,207 +1,87 @@
-# QOVES Facial Aesthetics & Style Advisor
+# looksmaxxing skill
 
-**An AI skill / knowledge base for evidence-based facial aesthetics, hairstyle selection, grooming, and style advice.**
+A practical AI skill for hair, grooming, glasses, skincare, clothing and facial presentation.
 
-Built from **291 QOVES Studio YouTube video transcripts** (153 regular videos + 138 Shorts) covering facial analysis, attractiveness research, and optimization strategies.
+Not a beauty-score machine. Not a diagnosis engine. Not a promise that every face should converge on the same guy with a five-millimetre beard fade.
 
----
+It helps turn a vague question — *what should I do with my hair? why do these frames feel wrong? how do I look less washed out on camera?* — into a small set of reversible, explainable things to try.
 
-## What is This?
+## what it does
 
-This repository contains a structured knowledge base extracted from [QOVES Studio](https://www.youtube.com/@QOVESStudio)'s public YouTube content. It's designed to be used as:
+- reads visual/style questions through hairline, hair quality, facial balance, grooming, glasses, colour and context;
+- gives a priority stack rather than twenty “optimisations”;
+- distinguishes practical styling advice from individual preference and medical territory;
+- provides a structured knowledge base for AI assistants and human readers.
 
-1. **An OpenClaw/Claude skill** — AI assistants can read these files to provide personalized style and aesthetics advice
-2. **A reference guide** — Humans can browse the markdown files for research-backed insights
-3. **A learning resource** — Study the science of facial attractiveness and style optimization
+## what it does not do
 
----
+- assign attractiveness scores or rank people;
+- diagnose skin, hair loss, health or mental-health conditions;
+- infer personality, ethnicity, health or genetics from appearance;
+- prescribe medication, diets, supplements, injectables or surgery;
+- turn a single selfie into fake biometric certainty.
 
-## Knowledge Base Structure
+## install
 
-```
-qoves-skill/
-├── SKILL.md                          # Main skill instructions (for AI agents)
-├── README.md                         # This file
-├── LICENSE                           # MIT License
-├── knowledge/
-│   ├── hairstyles-guide.md          # Hairstyle selection based on 6 facial features
-│   ├── mens-specific.md             # Male facial aesthetics and grooming
-│   ├── face-shapes.md               # Face shape guide (oval, round, square, etc.)
-│   ├── facial-proportions.md        # Golden ratio, thirds, fifths
-│   ├── grooming-essentials.md       # Skincare, facial hair, eyebrows, hair care
-│   ├── style-principles.md          # Fashion and style optimization
-│   ├── attractiveness-science.md    # Research-backed attractiveness principles
-│   └── common-mistakes.md           # What to avoid
-└── reference/
-    └── video-index.md               # Index of all 153 QOVES videos processed
+### as a skill
+
+Copy this folder into the skill directory of an assistant that supports `SKILL.md`, then point the assistant at it.
+
+```bash
+git clone https://github.com/raysvitla/looksmaxxing-skill.git
+# copy or symlink the repo into your assistant's skill directory
 ```
 
----
+The main instructions live in [`SKILL.md`](./SKILL.md). Topic notes are under [`knowledge/`](./knowledge/).
 
-## How to Use
+### as a reference
 
-### As an OpenClaw/Claude Skill
+Start here:
 
-1. **Copy the `qoves-skill` folder** to your OpenClaw workspace or Claude project directory.
-2. **Reference `SKILL.md`** in your agent's instructions or project context.
-3. **Ask questions** like:
-   - "What hairstyle should I get based on my face?"
-   - "How do I choose a hairstyle for a square jawline?"
-   - "What makes a male face attractive?"
-   - "Analyze this photo and suggest grooming improvements."
+| question | file |
+| --- | --- |
+| haircut, hairline, density, texture | [`knowledge/hairstyles-guide.md`](./knowledge/hairstyles-guide.md) |
+| glasses and frames | [`knowledge/glasses-selection-guide.md`](./knowledge/glasses-selection-guide.md) |
+| grooming and male facial hair | [`knowledge/mens-specific.md`](./knowledge/mens-specific.md) |
+| skincare, dark circles, puffiness | [`knowledge/skincare-guide.md`](./knowledge/skincare-guide.md) |
+| clothing and colour | [`knowledge/style-principles.md`](./knowledge/style-principles.md) |
+| myths / things not worth chasing | [`knowledge/common-mistakes.md`](./knowledge/common-mistakes.md) |
 
-The AI will read the appropriate knowledge files and provide evidence-based, actionable advice.
+## the method
 
----
+The usable hierarchy is deliberately boring:
 
-### As a Human Reference
+1. **start with the desired read** — sharper, softer, more formal, more like yourself, better on camera, lower maintenance;
+2. **change reversible things first** — cut, part, styling, skin basics, glasses, facial hair, clothing, light;
+3. **make a few moves, not a total life redesign**;
+4. **keep observation separate from judgement**;
+5. **refer medical questions to medical professionals.**
 
-Just browse the `knowledge/` folder markdown files. Each file is structured for easy reading:
+The original source corpus includes public QOVES Studio YouTube material plus linked research context. This repository contains Ray Svitla’s structure, prompts and synthesis — it is not affiliated with QOVES and does not reproduce or license their work. See [`SOURCES.md`](./SOURCES.md).
 
-- **Hairstyle advice?** → `hairstyles-guide.md`
-- **Men's grooming and aesthetics?** → `mens-specific.md`
-- **General attractiveness science?** → `attractiveness-science.md`
-- **Proportions and analysis?** → `facial-proportions.md`
+## example prompt
 
----
+> I have thick, slightly wavy hair, wear glasses, and want a cut that reads intentional but needs little styling. I like short sides but hate looking like a finance bro. What should I ask my barber for?
 
-## Key Insights (Highlights)
+A good answer should name the relevant constraints, give 2–3 options with trade-offs, say what to avoid **for that goal**, and include a short barber script.
 
-### Hairstyles
+## contribution
 
-The "6 features" framework for choosing hairstyles:
-1. **Hairline** (shape and density)
-2. **Facial symmetry** (asymmetric faces → asymmetric hair)
-3. **Forehead shape** (upright vs. sloped)
-4. **Facial width** (use layers to narrow)
-5. **Jawline** (defined jaw → show it off with short/up styles)
-6. **Hair quality** (grow as long as you can without losing quality)
+Useful contributions are welcome:
 
-→ **Forget generic "face shape" advice.** Your specific features matter more.
+- source corrections and stronger citations;
+- clearer, less absolutist wording;
+- image/camera caveats;
+- practical experience that can be separated from claims of fact.
 
----
+Please do not submit copied transcripts, scraped private images, individual “ratings,” medical claims without credible sourcing, or advice designed to shame people into buying things.
 
-### Men's Facial Aesthetics
+## license and source boundary
 
-The **6 features that make men handsome** (ranked by research):
-1. **Chin size** (length + width)
-2. **Chin projection** (forward prominence — recession is worse than protrusion)
-3. **Jawline** (gonial angle + jaw width)
-4. **Facial width-to-height ratio** (moderate is best)
-5. **Eyebrow thickness** (one of the top 3 masculinity signals)
-6. **Lower third prominence** (jaw + chin dominance)
+The **original repository structure and instructions** are MIT-licensed. Third-party source material remains with its respective owners. No affiliation with or endorsement by QOVES Studio is claimed.
 
-**The #1 non-surgical optimization:** **Lose body fat.** (Reveals all facial features.)
+See [`LICENSE`](./LICENSE), [`NOTICE.md`](./NOTICE.md), and [`SOURCES.md`](./SOURCES.md).
 
 ---
 
-### Attractiveness Science
-
-**Core principles:**
-- **Averageness** (normal features) + **masculinity/femininity** (sex-typical traits) = attractive
-- **Symmetry** signals genetic quality
-- **Neoteny** (youthful features) is attractive, especially in women
-- **Sexual dimorphism** (masculine features in men, feminine features in women) enhances attractiveness
-- **Context matters:** Preferences vary by culture, relationship type, and individual
-
----
-
-## Attribution
-
-**All content is based on publicly available material from QOVES Studio.**
-
-- **YouTube:** [@QOVESStudio](https://www.youtube.com/@QOVESStudio)
-- **Website:** [QOVES.com](https://qoves.com)
-
-This knowledge base was created by extracting and structuring insights from 153 QOVES Studio video transcripts (auto-generated English subtitles). 
-
-**Purpose:** Educational use, aggregation of public research, and AI skill development.
-
-**We do not claim ownership** of QOVES Studio's content. All credit goes to QOVES Studio for their research and educational videos.
-
----
-
-## Disclaimer
-
-- **Educational use only:** This is not medical or professional aesthetic advice.
-- **Research-based, not prescriptive:** Attractiveness is subjective and context-dependent. Use this as a guide, not a rulebook.
-- **No affiliation:** This project is not affiliated with, endorsed by, or sponsored by QOVES Studio.
-
----
-
-## How This Was Built
-
-1. **Downloaded** 153 QOVES Studio video transcripts using `yt-dlp` (auto-generated English subtitles)
-2. **Cleaned** VTT files to plain text (removed timestamps, duplicates)
-3. **Analyzed** and categorized content by topic
-4. **Synthesized** into structured markdown knowledge files
-5. **Packaged** as an OpenClaw skill + GitHub repo
-
-**Tech stack:**
-- `yt-dlp` for transcript download
-- Bash/sed/awk for cleaning
-- Claude (Anthropic) for analysis and synthesis
-- Markdown for documentation
-
----
-
-## Contributing
-
-Contributions welcome! If you:
-- Find errors or outdated info
-- Want to add new QOVES Studio content
-- Have suggestions for better organization
-
-Open an issue or submit a pull request.
-
----
-
-## Changelog
-
-### v1.1 (March 2026)
-- Added 138 YouTube Shorts transcripts
-- Total: 291 videos processed (153 regular + 138 shorts)
-- Shorts provide concise, research-backed tips
-
-### v1.0 (March 2026)
-- Initial release
-- 153 QOVES Studio regular videos processed
-- 9 comprehensive knowledge files
-- Complete hairstyle guide (6 features framework)
-- Men's facial aesthetics guide
-- Comprehensive skincare guide (4 types of dark circles)
-- Glasses selection guide
-- Expanded facial proportions and style guides
-
----
-
-## License
-
-**MIT License**
-
-You're free to:
-- Use this knowledge base
-- Modify it
-- Distribute it
-- Build on it
-
-**Conditions:**
-- Attribute QOVES Studio for the original content
-- Attribute this repository if you redistribute
-
-See `LICENSE` file for full details.
-
----
-
-## Links
-
-- **QOVES Studio YouTube:** https://www.youtube.com/@QOVESStudio
-- **QOVES Website:** https://qoves.com
-- **OpenClaw:** https://openclaw.com
-- **This Repository:** https://github.com/[YOUR_USERNAME]/qoves-facial-aesthetics-skill
-
----
-
-## Star this repo if you find it useful! ⭐
-
-Built with ♥ by the OpenClaw community.
+Built by [Ray Svitla](https://github.com/raysvitla) as part of an ongoing **one-person state** garden: small tools for seeing and acting a little more clearly.
